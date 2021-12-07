@@ -1,10 +1,13 @@
-
+server:
+  port: 9000
 spring:
   application:
     name: orderservice
-eureka:
-  client:
-    service-url:
-      defaultZone: http://127.0.0.1:10086/eureka
-server:
-  port: 9000
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://127.0.0.1:10086/eureka
