@@ -1,1 +1,5 @@
 /cloud-demo1/.idea
+*/target/*
+*.class
+/cloud-demo/user-service/target
+/cloud-demo/.idea
