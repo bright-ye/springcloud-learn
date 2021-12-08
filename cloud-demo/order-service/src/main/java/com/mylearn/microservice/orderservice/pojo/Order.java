@@ -1,5 +1,6 @@
 package com.mylearn.microservice.orderservice.pojo;
 
+import com.mylearn.microservice.pojo.User;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

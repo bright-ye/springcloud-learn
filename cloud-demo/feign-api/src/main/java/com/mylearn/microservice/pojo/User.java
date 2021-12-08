@@ -1,4 +1,4 @@
-package com.mylearn.microservice.orderservice.pojo;
+package com.mylearn.microservice.pojo;
 
 import lombok.Data;
 
