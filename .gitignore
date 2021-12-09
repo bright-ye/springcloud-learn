@@ -3,3 +3,4 @@
 *.class
 /cloud-demo/user-service/target
 /cloud-demo/.idea
+.idea/*
