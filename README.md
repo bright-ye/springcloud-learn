@@ -59,7 +59,38 @@ cloud-demo: 父工厂，管理依赖
 - 订单微服务和用户微服务都必须有自己的数据库（为了简化，模拟数据库），相互独立
 - 订单服务和用户服务都对外暴露Restful接口
 
+代码请参考仓库第一次提交:
+
 ![image-20211209231301654](README.assets/image-20211209231301654-16390629811141.png)
+
+## 2.2 实现远程调用
+
+### 2.2.1 案例需求
+
+查询订单时，将订单用户也一同查询出。
+
+```java
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
+import org.springframework.context.annotation.Bean;
+import org.springframework.web.client.RestTemplate;
+
+@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})
+public class OrderApplication {
+    public static void main(String[] args) {
+        SpringApplication.run(OrderApplication.class);
+    }
+
+    @Bean
+    public RestTemplate restTemplate() {
+        return new RestTemplate();
+    }
+}
+
+```
+
+
 
 
 
