@@ -6,7 +6,7 @@
 
 **单体架构：**将所有功能都集中在一个项目中开发，打成一个包部署。
 
-![image-20211208225018694](asserts/images/image-20211208225018694.png)
+![image-20211208225018694](asserts/images/image-20211208225018694-16391462856815.png)
 
 优点：部署成本低，架构简单
 
@@ -16,7 +16,7 @@
 
 **分布式架构：**根据业务功能对系统做拆分，每个业务功能模块作为一个独立项目开发，称为一个服务
 
-![image-20211208225157954](asserts/images/image-20211208225157954.png)
+![image-20211208225157954](asserts/images/image-20211208225157954-16391462883086.png)
 
 优点：降低服务耦合、有利于服务升级和拓展
 
@@ -24,7 +24,7 @@
 
 ## 1.3 微服务架构
 
-![image-20211208225351800](asserts/images/image-20211208225351800.png)
+![image-20211208225351800](asserts/images/image-20211208225351800-16391462904577.png)
 
 微服务实际是一种良好架构设计的**分布式架构方案**
 
@@ -41,7 +41,7 @@
 
 SpringCloud常见的组件包括：
 
-![image-20211208225824202](asserts/images/image-20211208225824202.png)
+![image-20211208225824202](asserts/images/image-20211208225824202-16391462921698.png)
 
 # 2. 服务拆分和远程调用
 
@@ -61,7 +61,7 @@ cloud-demo: 父工厂，管理依赖
 
 代码请参考仓库第一次提交:
 
-![image-20211209231301654](asserts/images/image-20211209231301654-16390629811141.png)
+![image-20211209231301654](asserts/images/image-20211209231301654-16390629811141-16391462946329.png)
 
 ## 2.2 实现远程调用
 
@@ -137,7 +137,7 @@ public class OrderController {
 
 ## 3.1 Eureka的结构和作用
 
-![image-20211209233312918](asserts/images/image-20211209233312918.png)
+![image-20211209233312918](asserts/images/image-20211209233312918-163914629760210.png)
 
 问题1：order-service如何得知user-service实例地址？
 
@@ -160,7 +160,7 @@ public class OrderController {
 
 因此，接下来我们动手实践的步骤包括：
 
-![image-20211209233557217](asserts/images/image-20211209233557217.png)
+![image-20211209233557217](asserts/images/image-20211209233557217-163914629992111.png)
 
 ## 3.2 搭建eureka-server服务
 
@@ -213,7 +213,7 @@ public class OrderController {
 
 4. 启动服务
 
-   启动服务，然后在浏览器访问： http://127.0.0.1:10086![image-20211210220409547](asserts/images/image-20211210220409547-16391461285591.png)
+   启动服务，然后在浏览器访问： http://127.0.0.1:10086![image-20211210220409547](asserts/images/image-20211210220409547-163914630247412.png)
 
 ## 3.3 服务注册
 
@@ -244,7 +244,7 @@ public class OrderController {
 
 3. 启动服务，在注册中心可以查看到
 
-   ![image-20211210220824582](asserts/images/image-20211210220824582.png)
+   ![image-20211210220824582](asserts/images/image-20211210220824582-163914630471413.png)
 
 ## 3.4 服务发现
 
@@ -277,10 +277,11 @@ public class OrderController {
 
    在order-service的OrderApplication中，给RestTemplate这个Bean添加一个@LoadBalanced注解，便可实现**服务拉取**和**负载均衡**
 
-   ![image-20211210221440757](asserts/images/image-20211210221440757.png)
+   ![image-20211210221440757](asserts/images/image-20211210221440757-163914630679514.png)
 
 4. 修改获取user的代码
 
-   ![image-20211210221657488](asserts/images/image-20211210221657488.png)
+   ![image-20211210221657488](asserts/images/image-20211210221657488-163914630869715.png)
 
    
+
